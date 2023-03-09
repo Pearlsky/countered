@@ -1,0 +1,59 @@
+<svg width="306" height="104" viewBox="0 0 306 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect y="0.768005" width="306" height="102" fill="url(#paint0_radial_0_1)" />
+  <ellipse
+    cx="81.59"
+    cy="52.8178"
+    rx="29.5354"
+    ry="52.4744"
+    transform="rotate(-17.0044 81.59 52.8178)"
+    fill="url(#paint1_linear_0_1)"
+  />
+  <ellipse
+    cx="214.051"
+    cy="52.3295"
+    rx="29.5834"
+    ry="51.0202"
+    transform="rotate(12.1589 214.051 52.3295)"
+    fill="url(#paint2_linear_0_1)"
+  />
+  <path d="M74.2848 0.942786L103.417 6.75155L99.648 16.4064L74.2848 0.942786Z" fill="#CFEEEC" />
+  <defs>
+    <radialGradient
+      id="paint0_radial_0_1"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(295.941 132.381) rotate(179.546) scale(207.536 668.036)"
+    >
+      <stop offset="0.342958" stop-color="#CFC2FF" />
+      <stop offset="0.46875" stop-color="#CFEEEC" />
+      <stop offset="0.9999" stop-color="#CFEEEC" />
+      <stop offset="1" stop-color="#B4C3F9" />
+    </radialGradient>
+    <linearGradient
+      id="paint1_linear_0_1"
+      x1="81.59"
+      y1="0.343426"
+      x2="81.59"
+      y2="105.292"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#B4C3F9" />
+      <stop offset="0.619792" stop-color="#B4C3F9" />
+      <stop offset="0.791667" stop-color="#B4C3F9" />
+      <stop offset="1" stop-color="#CFEEEC" />
+    </linearGradient>
+    <linearGradient
+      id="paint2_linear_0_1"
+      x1="214.051"
+      y1="1.30934"
+      x2="214.051"
+      y2="103.35"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0.822917" stop-color="#CFC2FF" />
+      <stop offset="1" stop-color="#CFEEEC" />
+    </linearGradient>
+  </defs>
+</svg>
