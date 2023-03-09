@@ -1,7 +1,15 @@
-<script setup></script>
+<script setup>
+import NavBar from './components/NavBar.vue';
+import HeroSection from './components/HeroSection.vue';
+</script>
 
 <template>
-  <header></header>
+  <div class="w-full h-full bg-[#ededee]">
+    <div class="relative">
+    </div>
+    <div class="h-full p-5">
+      <NavBar/>
+      <HeroSection/>
+    </div>
+  </div>
 </template>
-
-<style scoped></style>
