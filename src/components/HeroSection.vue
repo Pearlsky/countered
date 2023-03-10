@@ -20,8 +20,10 @@
       </button>
     </div>
     <div class="mt-16 md:mt-24 w-full">
-      <picture></picture>
-      <img class="max-w-full mx-auto" src="../assets/hero-mobile.svg" alt="" />
+      <picture>
+        <source media="(min-width: 640px)" srcset="../assets/hero-desktop.svg">
+        <img class="max-w-full mx-auto" src="../assets/hero-mobile.svg" alt="" />
+      </picture>
     </div>
   </section>
 </template>
