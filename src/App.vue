@@ -1,15 +1,15 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
-import HeroSection from './components/HeroSection.vue';
+import BacklineItems from './components/BacklineItems.vue';
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
   <div class="w-full h-full bg-[#ededee]">
-    <div class="relative">
-    </div>
+    <BacklineItems/>
     <div class="h-full p-5">
       <NavBar/>
-      <HeroSection/>
+      <HomeView/>
     </div>
   </div>
 </template>
