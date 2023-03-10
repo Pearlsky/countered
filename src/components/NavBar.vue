@@ -1,7 +1,7 @@
 <template>
   <section class="flex items-center justify-between md:px-6">
     <div><img src="../assets/logo.svg" alt="" /></div>
-    <div class="basis-[58%]">
+    <div class="md:basis-[58%]">
       <nav class="w-full">
         <button class="md:hidden">X</button>
         <div class="hidden md:flex md:justify-between md:items-center md:w-full">
