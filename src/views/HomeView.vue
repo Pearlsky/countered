@@ -1,9 +1,11 @@
 <script setup>
+import FooterSection from '../components/FooterSection.vue'
 import HeroSection from '../components/HeroSection.vue'
 </script>
 
 <template>
-  <section>
+  <div>
     <HeroSection />
-  </section>
+    <FooterSection />
+  </div>
 </template>
