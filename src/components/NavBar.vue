@@ -1,5 +1,14 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+
+const navIsOpen = ref("hidden")
+const showNav = () => {
+  navIsOpen.value = "block"
+}
+const hideNav = () => {
+  navIsOpen.value = "hidden"
+}
 </script>
 
 <template>
@@ -9,18 +18,58 @@ import { RouterLink } from 'vue-router'
     </div>
     <div class="md:basis-[65%] lg:basis-[58%]">
       <nav class="w-full">
-        <button class="md:hidden">X</button>
-        <div class="hidden md:flex md:justify-between md:items-center md:w-full">
-          <ul
-            class="md:flex md:justify-between md:basis-1/2 lg:basis-2/5 xl:basis-[30%] text-base font-semibold"
+        <button @click="showNav" class="md:hidden">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <li><RouterLink to="/counter">Counter</RouterLink></li>
-            <li><RouterLink to="/alarm">Alarm</RouterLink></li>
-            <li><RouterLink to="/stopwatch">Stopwatch</RouterLink></li>
+            <path d="M4 8H20" stroke="#141B34" stroke-width="2" stroke-linecap="round" />
+            <path d="M4 16H20" stroke="#141B34" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div
+          class="w-full h-full p-5 fixed top-0 left-0 md:static md:flex md:justify-between md:items-center md:w-full bg-[#ededee] md:bg-transparent" :class="navIsOpen"
+        >
+          <div class="flex justify-between md:hidden">
+            <article><img src="../assets/logo.svg" alt="" /></article>
+            <button @click="hideNav">
+              <svg
+                width="24"
+                height="18"
+                viewBox="0 0 14 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 1.44287L0.5 14.4429"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M0.5 1.44287L13.5 14.4429"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <ul
+            class="mt-12 md:mt-0 md:flex md:justify-between md:basis-1/2 lg:basis-2/5 xl:basis-[30%] text-base text-center md:text-left font-semibold"
+          >
+            <li class="mb-6 md:mb-0"><RouterLink to="/counter">Counter</RouterLink></li>
+            <li class="mb-6 md:mb-0"><RouterLink to="/alarm">Alarm</RouterLink></li>
+            <li class="mb-6 md:mb-0"><RouterLink to="/stopwatch">Stopwatch</RouterLink></li>
           </ul>
-          <div>
+          <div class="flex justify-center md:block">
             <a
-              class="px-4 py-1.5 md:py-4 md:px-6 flex items-center text-base font-bold text-white bg-navybody border-0 rounded-full cursor-pointer"
+              class="w-fit px-4 py-3 md:py-4 md:px-6 flex items-center text-base font-bold text-white bg-navybody border-0 rounded-full cursor-pointer"
               href=""
               ><span class="mr-2">Get started</span>
               <span
