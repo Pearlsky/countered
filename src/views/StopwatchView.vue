@@ -1,3 +1,3 @@
 <template>
-  <section></section>
+  <section class="h-screen"></section>
 </template>
