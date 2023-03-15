@@ -2,19 +2,19 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const navIsOpen = ref("hidden")
+const navIsOpen = ref('hidden')
 const showNav = () => {
-  navIsOpen.value = "block"
+  navIsOpen.value = 'block'
 }
 const hideNav = () => {
-  navIsOpen.value = "hidden"
+  navIsOpen.value = 'hidden'
 }
 </script>
 
 <template>
   <section class="flex items-center justify-between md:px-6">
     <div>
-      <RouterLink to="/"><img src="../assets/logo.svg" alt="" /></RouterLink>
+      <a href="/"><img src="../assets/logo.svg" alt="" /></a>
     </div>
     <div class="md:basis-[65%] lg:basis-[58%]">
       <nav class="w-full">
@@ -31,10 +31,13 @@ const hideNav = () => {
           </svg>
         </button>
         <div
-          class="w-full h-full p-5 fixed top-0 left-0 md:static md:flex md:justify-between md:items-center md:w-full bg-[#ededee] md:bg-transparent" :class="navIsOpen"
+          class="w-full h-full p-5 md:p-1 fixed top-0 left-0 md:static md:flex md:justify-between md:items-center md:w-full bg-[#ededee] md:bg-transparent"
+          :class="navIsOpen"
         >
           <div class="flex justify-between md:hidden">
-            <article><img src="../assets/logo.svg" alt="" /></article>
+            <article>
+              <a href="/"><img src="../assets/logo.svg" alt="" /></a>
+            </article>
             <button @click="hideNav">
               <svg
                 width="24"
@@ -63,9 +66,28 @@ const hideNav = () => {
           <ul
             class="mt-12 md:mt-0 md:flex md:justify-between md:basis-1/2 lg:basis-2/5 xl:basis-[30%] text-base text-center md:text-left font-semibold"
           >
-            <li class="mb-6 md:mb-0"><RouterLink to="/counter">Counter</RouterLink></li>
-            <li class="mb-6 md:mb-0"><RouterLink to="/alarm">Alarm</RouterLink></li>
-            <li class="mb-6 md:mb-0"><RouterLink to="/stopwatch">Stopwatch</RouterLink></li>
+            <li class="mb-6 md:mb-0">
+              <RouterLink
+                @click="hideNav"
+                to="/counter"
+                class="block relative hover:before:content-highlight hover:before:absolute hover:before:top-[-2.5px] hover:before:left-[calc(50%-70px)] md:hover:before:left-[-70%]"
+                >Counter</RouterLink
+              >
+            </li>
+            <li class="mb-6 md:mb-0">
+              <RouterLink
+                to="/alarm"
+                class="block relative hover:before:content-highlight hover:before:absolute hover:before:top-[-2.5px] hover:before:left-[calc(50%-70px)] md:hover:before:left-[-115%]"
+                >Alarm</RouterLink
+              >
+            </li>
+            <li class="mb-6 md:mb-0">
+              <RouterLink
+                to="/stopwatch"
+                class="block relative hover:before:content-highlight hover:before:absolute hover:before:top-[-2.5px] hover:before:left-[calc(50%-70px)] md:hover:before:left-[-45%]"
+                >Stopwatch</RouterLink
+              >
+            </li>
           </ul>
           <div class="flex justify-center md:block">
             <a
