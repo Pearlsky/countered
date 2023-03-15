@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  linkActiveClass:
+        'before:content-highlight before:absolute before:top-[-2.5px] before:left-[calc(50%-70px)] md:before:left-[-70%]',
   routes: [
     {
       path: '/',
