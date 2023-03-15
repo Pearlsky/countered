@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       colors: {
         navybody : "#141B34",
+      },
+
+      content: {
+        'highlight': 'url("/src/assets/highlight.svg")'
       }
     },
   },
