@@ -6,7 +6,7 @@
 
 ### Overview
 
-Utils is an SPA built with Vue to build a counter that implement composition API concepts like composables, makes use of Vuex and Vue Router, etc
+Utils is an SPA built with Vue. It features primarily, a counter that implements composition API concepts like composables, makes use of Vuex and Vue Router, etc
 
 The futuristic idea is to build a bunch of "utility" tools all available in one app. 
 
