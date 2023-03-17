@@ -28,6 +28,12 @@ const router = createRouter({
       path: '/stopwatch',
       name: 'stopwatch',
       component: () => import('../views/StopwatchView.vue')
+    },
+
+    { 
+      path: '/:catchAll(.*)', 
+      component: () => import('../components/404Error.vue'),
+      name: '404 Error'
     }
   ]
 })
