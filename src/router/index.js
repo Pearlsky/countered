@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import HomeView from '../views/HomeView.vue'
+import ErrorItem from '../components/404Error.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,9 +32,9 @@ const router = createRouter({
       component: () => import('../views/StopwatchView.vue')
     },
 
-    { 
+    {
       path: '/:catchAll(.*)', 
-      component: () => import('../components/404Error.vue'),
+      component: ErrorItem,
       name: '404 Error'
     }
   ]
